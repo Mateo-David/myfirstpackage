@@ -25,32 +25,15 @@ class DotNavigationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       height: 100,
-      color: Colors.transparent,
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 8),
-            child: Body(
-              items: items,
-              currentIndex: currentIndex,
-              selectedItemColor: selectedItemColor,
-              onTap: onTap!,
-            ),
-          ),
-        ],
+      width: 500,
+      child: Body(
+        items: items,
+        currentIndex: currentIndex,
+        selectedItemColor: selectedItemColor,
+        onTap: onTap!,
       ),
     );
-
-    // Column(children: [
-    //   Body(
-    //     items: items,
-    //     currentIndex: currentIndex,
-    //     selectedItemColor: selectedItemColor,
-    //     onTap: onTap!,
-    //   ),
-    // ]);
   }
 }
