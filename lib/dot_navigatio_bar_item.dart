@@ -5,8 +5,6 @@ class DotNavigationBarItem {
     this.activeIcon,
     required this.icon,
   });
-
   Widget? activeIcon;
-
   Widget icon;
 }

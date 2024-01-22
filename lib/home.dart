@@ -25,7 +25,6 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        // backgroundColor: Colors.amber,
         body: screen[currentIndex],
         bottomNavigationBar: DotNavigationBar(
             selectedFontSize: 0,
@@ -36,93 +35,6 @@ class _HomeState extends State<Home> {
               });
             },
             items: [
-              // DotNavigationBarItem(
-              //   activeIcon: const Column(
-              //     children: [
-              //       Icon(
-              //         Icons.home,
-              //         color: Colors.green,
-              //       ),
-              //       SizedBox(
-              //         height: 10,
-              //       ),
-              //       CircleAvatar(
-              //         backgroundColor: Colors.green,
-              //         radius: 3,
-              //       ),
-              //     ],
-              //   ),
-              //   icon: Icon(
-              //     Icons.home_outlined,
-              //   ),
-              // ),
-              // DotNavigationBarItem(
-              //   activeIcon: const Column(
-              //     children: [
-              //       Icon(
-              //         Icons.settings,
-              //         color: Colors.green,
-              //       ),
-              //       SizedBox(
-              //         height: 10,
-              //       ),
-              //       CircleAvatar(
-              //         backgroundColor: Colors.green,
-              //         radius: 3,
-              //       ),
-              //     ],
-              //   ),
-              //   icon: Icon(
-              //     Icons.settings_outlined,
-              //   ),
-              // ),
-
-              // DotNavigationBarItem(
-              //   activeIcon: const Column(
-              //     children: [
-              //       Icon(
-              //         Icons.home,
-              //         color: Colors.green,
-              //       ),
-              //       SizedBox(
-              //         height: 10,
-              //       ),
-              //       CircleAvatar(
-              //         backgroundColor: Colors.green,
-              //         radius: 3,
-              //       ),
-              //     ],
-              //   ),
-              //   icon: Icon(
-              //     Icons.home_outlined,
-              //   ),
-              // ),
-              // DotNavigationBarItem(
-              //   activeIcon: const Column(
-              //     children: [
-              //       Icon(
-              //         Icons.settings,
-              //         color: Colors.green,
-              //       ),
-              //       SizedBox(
-              //         height: 10,
-              //       ),
-              //       CircleAvatar(
-              //         backgroundColor: Colors.green,
-              //         radius: 3,
-              //       ),
-              //     ],
-              //   ),
-              //   icon: Icon(
-              //     Icons.settings_outlined,
-              //   ),
-              // ),
-
-              // DotNavigationBarItem(
-              //   icon: Icon(
-              //     Icons.home,
-              //   ),
-              // ),
               DotNavigationBarItem(
                   activeIcon: const Column(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -158,54 +70,6 @@ class _HomeState extends State<Home> {
                   icon: const Icon(Icons.home_outlined)),
               DotNavigationBarItem(icon: Icon(Icons.settings)),
             ],
-            currentIndex: currentIndex)
-
-        // DotNavigationBar(
-        //   items: [
-        // DotNavigationBarItem(
-        //     activeIcon: const Column(
-        //       children: [
-        //         Icon(
-        //           Icons.home,
-        //           color: Colors.green,
-        //         ),
-        //         SizedBox(
-        //           height: 10,
-        //         ),
-        //         CircleAvatar(
-        //           backgroundColor: Colors.green,
-        //           radius: 3,
-        //         ),
-        //       ],
-        //     ),
-        //     icon2: const Icon(Icons.abc)),
-        //     DotNavigationBarItem(
-        //         activeIcon: const Column(
-        //           children: [
-        //             Icon(
-        //               Icons.settings,
-        //               color: Colors.green,
-        //             ),
-        //             SizedBox(
-        //               height: 10,
-        //             ),
-        //             CircleAvatar(
-        //               backgroundColor: Colors.green,
-        //               radius: 3,
-        //             ),
-        //           ],
-        //         ),
-        //         icon2: const Icon(Icons.settings)),
-        //   ],
-        //   // screens: screen,
-        //   onTap: (index) {
-        //     setState(() {
-        //       currentIndex = index;
-        //     });
-        //   },
-        //   currentIndex: currentIndex,
-        // ),
-
-        );
+            currentIndex: currentIndex));
   }
 }
