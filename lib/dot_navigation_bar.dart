@@ -9,10 +9,9 @@ class DotNavigationBar extends StatelessWidget {
     required this.onTap,
     required this.items,
     required this.currentIndex,
-    this.selectedFontSize = 0,
-    this.unselectedFontSize = 0,
+    this.selectedFontSize = 0.0,
+    this.unselectedFontSize = 0.0,
     this.backgroundColor = Colors.white,
-    this.selectedItemColor = Colors.black,
   });
 
   int currentIndex;
@@ -20,18 +19,16 @@ class DotNavigationBar extends StatelessWidget {
   double selectedFontSize;
   double unselectedFontSize;
   Color backgroundColor;
-  Color selectedItemColor;
   Function(int)? onTap;
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 100,
-      width: 500,
+      height: MediaQuery.of(context).size.height * 0.07,
+      width: double.infinity,
       child: Body(
         items: items,
         currentIndex: currentIndex,
-        selectedItemColor: selectedItemColor,
         onTap: onTap!,
       ),
     );

@@ -2,65 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:myfirstpackage/dot_navigatio_bar_item.dart';
 import 'package:myfirstpackage/dot_navigation_bar.dart';
 
-// class Body extends StatelessWidget {
-//   const Body({
-//     super.key,
-//     required this.items,
-//     required this.currentIndex,
-//     required this.selectedItemColor,
-//     required this.onTap,
-//   });
-
-//   final List<DotNavigationBarItem> items;
-//   final int currentIndex;
-//   final Color? selectedItemColor;
-//   final Function(int index) onTap;
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return const Scaffold(
-//         backgroundColor: Colors.cyanAccent,
-//         bottomNavigationBar: Row(
-//           mainAxisAlignment: MainAxisAlignment.spaceBetween,
-//           children: [],
-//         ));
-//   }
-// }
-
 class Body extends StatelessWidget {
   const Body({
     super.key,
     required this.items,
     required this.currentIndex,
-    required this.selectedItemColor,
     required this.onTap,
   });
 
   final List<DotNavigationBarItem> items;
   final int currentIndex;
-  final Color? selectedItemColor;
   final Function(int index) onTap;
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.cyanAccent,
-      bottomNavigationBar: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: items.asMap().entries.map((entry) {
-          final index = entry.key;
-          final item = entry.value;
-          final isSelected = currentIndex == index;
+      backgroundColor: Colors.transparent,
+      bottomNavigationBar: Center(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: items.asMap().entries.map((entry) {
+            final index = entry.key;
+            final item = entry.value;
+            final isSelected = currentIndex == index;
 
-          return GestureDetector(
-            onTap: () => onTap(index),
-            child: Container(
-              color: isSelected ? selectedItemColor : null,
-              padding: EdgeInsets.all(8),
-              child: isSelected ? item.activeIcon ?? item.icon : item.icon,
-            ),
-          );
-        }).toList(),
+            return GestureDetector(
+              onTap: () => onTap(index),
+              child: Container(
+                child: isSelected ? item.activeIcon ?? item.icon : item.icon,
+              ),
+            );
+          }).toList(),
+        ),
       ),
     );
   }

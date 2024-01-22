@@ -16,6 +16,8 @@ class Home extends StatefulWidget {
 final screen = [
   First(),
   second(),
+  First(),
+  second(),
 ];
 int currentIndex = 0;
 
@@ -23,41 +25,160 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.amber,
+        // backgroundColor: Colors.amber,
         body: screen[currentIndex],
         bottomNavigationBar: DotNavigationBar(
+            selectedFontSize: 0,
+            unselectedFontSize: 0,
             onTap: (index) {
               setState(() {
                 currentIndex = index;
               });
             },
             items: [
-              DotNavigationBarItem(icon: const Icon(Icons.home)),
-              DotNavigationBarItem(icon: const Icon(Icons.settings)),
-              // DotNavigationBarItem(icon: const Icon(Icons.home)),
-              // DotNavigationBarItem(icon: const Icon(Icons.home)),
+              // DotNavigationBarItem(
+              //   activeIcon: const Column(
+              //     children: [
+              //       Icon(
+              //         Icons.home,
+              //         color: Colors.green,
+              //       ),
+              //       SizedBox(
+              //         height: 10,
+              //       ),
+              //       CircleAvatar(
+              //         backgroundColor: Colors.green,
+              //         radius: 3,
+              //       ),
+              //     ],
+              //   ),
+              //   icon: Icon(
+              //     Icons.home_outlined,
+              //   ),
+              // ),
+              // DotNavigationBarItem(
+              //   activeIcon: const Column(
+              //     children: [
+              //       Icon(
+              //         Icons.settings,
+              //         color: Colors.green,
+              //       ),
+              //       SizedBox(
+              //         height: 10,
+              //       ),
+              //       CircleAvatar(
+              //         backgroundColor: Colors.green,
+              //         radius: 3,
+              //       ),
+              //     ],
+              //   ),
+              //   icon: Icon(
+              //     Icons.settings_outlined,
+              //   ),
+              // ),
+
+              // DotNavigationBarItem(
+              //   activeIcon: const Column(
+              //     children: [
+              //       Icon(
+              //         Icons.home,
+              //         color: Colors.green,
+              //       ),
+              //       SizedBox(
+              //         height: 10,
+              //       ),
+              //       CircleAvatar(
+              //         backgroundColor: Colors.green,
+              //         radius: 3,
+              //       ),
+              //     ],
+              //   ),
+              //   icon: Icon(
+              //     Icons.home_outlined,
+              //   ),
+              // ),
+              // DotNavigationBarItem(
+              //   activeIcon: const Column(
+              //     children: [
+              //       Icon(
+              //         Icons.settings,
+              //         color: Colors.green,
+              //       ),
+              //       SizedBox(
+              //         height: 10,
+              //       ),
+              //       CircleAvatar(
+              //         backgroundColor: Colors.green,
+              //         radius: 3,
+              //       ),
+              //     ],
+              //   ),
+              //   icon: Icon(
+              //     Icons.settings_outlined,
+              //   ),
+              // ),
+
+              // DotNavigationBarItem(
+              //   icon: Icon(
+              //     Icons.home,
+              //   ),
+              // ),
+              DotNavigationBarItem(
+                  activeIcon: const Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.home,
+                        color: Colors.green,
+                      ),
+                      CircleAvatar(
+                        radius: 3,
+                        backgroundColor: Colors.green,
+                      )
+                    ],
+                  ),
+                  icon: const Icon(Icons.home_outlined)),
+              DotNavigationBarItem(icon: Icon(Icons.settings)),
+              DotNavigationBarItem(
+                  activeIcon: const Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: [
+                      Icon(
+                        Icons.home,
+                        color: Colors.green,
+                      ),
+                      CircleAvatar(
+                        radius: 3,
+                        backgroundColor: Colors.green,
+                      )
+                    ],
+                  ),
+                  icon: const Icon(Icons.home_outlined)),
+              DotNavigationBarItem(icon: Icon(Icons.settings)),
             ],
             currentIndex: currentIndex)
 
         // DotNavigationBar(
         //   items: [
-        //     DotNavigationBarItem(
-        //         activeIcon: const Column(
-        //           children: [
-        //             Icon(
-        //               Icons.home,
-        //               color: Colors.green,
-        //             ),
-        //             SizedBox(
-        //               height: 10,
-        //             ),
-        //             CircleAvatar(
-        //               backgroundColor: Colors.green,
-        //               radius: 3,
-        //             ),
-        //           ],
+        // DotNavigationBarItem(
+        //     activeIcon: const Column(
+        //       children: [
+        //         Icon(
+        //           Icons.home,
+        //           color: Colors.green,
         //         ),
-        //         icon2: const Icon(Icons.abc)),
+        //         SizedBox(
+        //           height: 10,
+        //         ),
+        //         CircleAvatar(
+        //           backgroundColor: Colors.green,
+        //           radius: 3,
+        //         ),
+        //       ],
+        //     ),
+        //     icon2: const Icon(Icons.abc)),
         //     DotNavigationBarItem(
         //         activeIcon: const Column(
         //           children: [
