@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:myfirstpackage/body.dart';
 import 'package:myfirstpackage/dot_navigatio_bar_item.dart';
 
-class DotNavigationBar extends StatelessWidget {
-  DotNavigationBar({
+class DotBottomNavigationBar extends StatelessWidget {
+  DotBottomNavigationBar({
     super.key,
     required this.onTap,
     required this.items,
@@ -15,7 +15,7 @@ class DotNavigationBar extends StatelessWidget {
   });
 
   int currentIndex;
-  final List<DotNavigationBarItem> items;
+  final List<DotBottomNavigationBarItem> items;
   double selectedFontSize;
   double unselectedFontSize;
   Color backgroundColor;
@@ -26,7 +26,7 @@ class DotNavigationBar extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * 0.07,
       width: double.infinity,
-      child: Body(
+      child: BottomNavBar(
         items: items,
         currentIndex: currentIndex,
         onTap: onTap!,

@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:myfirstpackage/dot_navigatio_bar_item.dart';
-import 'package:myfirstpackage/dot_navigation_bar.dart';
 
-class Body extends StatelessWidget {
-  const Body({
+class BottomNavBar extends StatelessWidget {
+  const BottomNavBar({
     super.key,
     required this.items,
     required this.currentIndex,
     required this.onTap,
   });
 
-  final List<DotNavigationBarItem> items;
+  final List<DotBottomNavigationBarItem> items;
   final int currentIndex;
   final Function(int index) onTap;
 
@@ -26,7 +25,6 @@ class Body extends StatelessWidget {
             final index = entry.key;
             final item = entry.value;
             final isSelected = currentIndex == index;
-
             return GestureDetector(
               onTap: () => onTap(index),
               child: Container(

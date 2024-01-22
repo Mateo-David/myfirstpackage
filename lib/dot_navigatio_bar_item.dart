@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class DotNavigationBarItem {
-  DotNavigationBarItem({
+class DotBottomNavigationBarItem {
+  DotBottomNavigationBarItem({
     this.activeIcon,
     required this.icon,
   });

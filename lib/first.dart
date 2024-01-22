@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:myfirstpackage/home.dart';
 import 'package:myfirstpackage/seconds.dart';
 
 class First extends StatelessWidget {
@@ -31,7 +32,7 @@ class First extends StatelessWidget {
               onTap: () {
                 Navigator.pushReplacement(
                   context,
-                  MaterialPageRoute(builder: (context) => const second()),
+                  MaterialPageRoute(builder: (context) => const Home()),
                 );
               },
               child: Center(

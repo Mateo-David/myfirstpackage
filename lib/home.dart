@@ -25,51 +25,55 @@ class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        body: screen[currentIndex],
-        bottomNavigationBar: DotNavigationBar(
-            selectedFontSize: 0,
-            unselectedFontSize: 0,
-            onTap: (index) {
-              setState(() {
-                currentIndex = index;
-              });
+      body: screen[currentIndex],
+      bottomNavigationBar: DotBottomNavigationBar(
+        selectedFontSize: 0,
+        unselectedFontSize: 0,
+        onTap: (index) {
+          setState(
+            () {
+              currentIndex = index;
             },
-            items: [
-              DotNavigationBarItem(
-                  activeIcon: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.home,
-                        color: Colors.green,
-                      ),
-                      CircleAvatar(
-                        radius: 3,
-                        backgroundColor: Colors.green,
-                      )
-                    ],
+          );
+        },
+        items: [
+          DotBottomNavigationBarItem(
+              activeIcon: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.home,
+                    color: Colors.green,
                   ),
-                  icon: const Icon(Icons.home_outlined)),
-              DotNavigationBarItem(icon: Icon(Icons.settings)),
-              DotNavigationBarItem(
-                  activeIcon: const Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      Icon(
-                        Icons.home,
-                        color: Colors.green,
-                      ),
-                      CircleAvatar(
-                        radius: 3,
-                        backgroundColor: Colors.green,
-                      )
-                    ],
+                  CircleAvatar(
+                    radius: 3,
+                    backgroundColor: Colors.green,
+                  )
+                ],
+              ),
+              icon: const Icon(Icons.home_outlined)),
+          DotBottomNavigationBarItem(icon: Icon(Icons.settings)),
+          DotBottomNavigationBarItem(
+              activeIcon: const Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Icon(
+                    Icons.home,
+                    color: Colors.green,
                   ),
-                  icon: const Icon(Icons.home_outlined)),
-              DotNavigationBarItem(icon: Icon(Icons.settings)),
-            ],
-            currentIndex: currentIndex));
+                  CircleAvatar(
+                    radius: 3,
+                    backgroundColor: Colors.green,
+                  )
+                ],
+              ),
+              icon: const Icon(Icons.home_outlined)),
+          DotBottomNavigationBarItem(icon: Icon(Icons.settings)),
+        ],
+        currentIndex: currentIndex,
+      ),
+    );
   }
 }
